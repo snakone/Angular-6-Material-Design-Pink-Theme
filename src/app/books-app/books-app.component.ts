@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-
 @Component({
   selector: 'books-app',
   templateUrl: './books-app.component.html',
@@ -73,6 +72,8 @@ export class BooksAppComponent implements OnInit {
         "bookImage" : "Cassete"
     }
   ];
+
+    p: number = 1;
 
   constructor() {
 
