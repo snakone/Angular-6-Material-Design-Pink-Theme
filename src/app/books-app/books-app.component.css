@@ -1,0 +1,118 @@
+
+p {
+  padding: 0px 0px 5px  0px;
+  width: 50%;
+  margin: 15% auto 8% auto;
+  font-size: 1.2em;
+  border-bottom: 2px solid #eee;
+  color: #0000A0;
+  font-weight: bold;
+}
+
+
+h5 {
+margin-top: 30px;
+font-size: 1.3em;
+font-weight: bold;
+}
+
+.red {
+
+  background-color: red;
+}
+
+.blue{
+  background-color: blue;
+}
+
+
+.hoverable img {
+    border-radius: 10px 10px 0px 0px;
+}
+
+.hoverable img:hover {
+    opacity: 0.7;
+}
+
+.card {
+  width: 90%;
+  border-radius: 10px 10px 0px 0px;
+  margin: 15px auto;
+  min-height:415px;
+  position: relative;
+}
+
+.card:hover {
+  cursor:pointer;
+}
+
+.card-action {
+  font-weight: bold;
+}
+
+@media only screen and (max-width : 668px) {
+.card {
+      width:85%;
+  }
+}
+
+.book-Price {
+  font-weight: bold;
+  font-size: .9em;
+}
+
+.book-author {
+height: 50px;
+}
+
+/* Pagination CSS - /deep/ to target into Ngx Component (Angular's view encapsulation) */
+
+.ngPages /deep/ .ngx-pagination .current {
+    background: #64ffda;
+    border-radius: 3px;
+    color:black;
+    margin-top: 30px;
+
+  }
+
+  .ngPages /deep/ .ngx-pagination  {
+    text-align: center;
+    }
+
+
+.ngPagesMobile /deep/ .ngx-pagination {
+  display: none;
+  }
+
+
+@media only screen and (max-width : 992px) {
+
+  .ngPagesMobile /deep/ .ngx-pagination {
+    display: block;
+    margin-top:0px;
+    text-align: center;
+    }
+
+  .ngPagesMobile /deep/ .ngx-pagination .current {
+      background: #64ffda;
+      border-radius: 3px;
+      color:black;
+      margin-top:0px;
+      margin-bottom: 5px;
+
+    }
+
+}
+
+
+@media only screen and (max-width : 402px) {
+  p {
+    margin: 10% auto 5% auto;
+  }
+
+  .card-action{
+    text-align: center;
+    font-size: .7em;
+  }
+
+}

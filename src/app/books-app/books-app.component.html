@@ -1,0 +1,29 @@
+<div class="ngPagination">
+
+<pagination-controls class="ngPagesMobile" (pageChange)="p = $event"></pagination-controls>
+
+    <div [scrolling] *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p }"
+    class="col l3 s6"
+    [ngClass]="{'red': book['bookPrice']>='30'}"> <!-- Apply "red" Class to book 'Price > 20' -->
+      <div class="card sticky-action hoverable">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="{{urlPath}}{{book['bookImage']}}.jpg">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4
+          truncate scroll-border-bottom">{{ book["bookTitle"] }}</span>
+        <div class="book-author">{{ book["bookAuthor"] }}</div>
+        </div>
+        <div class="card-action">
+          <a href="#">Comprar</a>
+        </div>
+      </div>
+   </div>
+
+</div>
+
+<pagination-controls class="ngPages" (pageChange)="p = $event"></pagination-controls>
+
+<!-- <div class="section">
+  <button type="button" class="btn" (click)="addBook()">Añadir Libro</button>
+</div> -->
