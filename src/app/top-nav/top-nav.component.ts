@@ -28,7 +28,7 @@ export class TopNavComponent {
     this.appTitle = "Tinta Virtual";
     this.ngVersion = "Angular 6";
     this.appSource = "Material Design";
-    this.githubLink = "http://github.com";
+    this.githubLink = "https://github.com/snakone/Angular-6-Material-Design-Pink-Theme";
     this.appMail = "mailto:sergio.martinez87.web@gmail.com?Subject=Angular%20Material";
   }
 
