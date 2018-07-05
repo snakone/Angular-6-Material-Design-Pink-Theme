@@ -5,7 +5,8 @@ export class booksModel {
       public bookTitle: string,
       public bookAuthor: string,
       public bookGender: string,
-      public bookPrice: string,
-      public bookImage: string
+      public bookPrice: number,
+      public bookImage: string,
+      public bookLikes: number
   ){}
 }

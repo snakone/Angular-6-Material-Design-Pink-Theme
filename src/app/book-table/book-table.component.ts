@@ -13,7 +13,7 @@ export class BookTableComponent implements OnInit {
   dataSource: BookTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['bookTitle', 'bookAuthor', 'bookGender', 'bookPrice', 'bookLikes'];
 
   ngOnInit() {
     this.dataSource = new BookTableDataSource(this.paginator, this.sort);

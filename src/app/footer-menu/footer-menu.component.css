@@ -5,6 +5,12 @@
 
 .nav-Menu {
   display: none;
+  }
+
 }
 
+/*Deleting random circle on Hover, was a default feature */
+
+.cdk-focused {
+  background: transparent;
 }

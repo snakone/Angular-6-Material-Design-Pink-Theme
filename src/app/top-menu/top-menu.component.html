@@ -4,7 +4,7 @@
 
 <mat-menu #menu="matMenu"  [overlapTrigger]="false">
 
-  <button mat-menu-item>
+  <button [routerLink]="['home']" mat-menu-item>
     <mat-icon>home</mat-icon>
     <span>Inicio</span>
   </button>
@@ -14,7 +14,7 @@
     <span>Novedades</span>
   </button>
 
-  <button mat-menu-item [matMenuTriggerFor]="bookType">
+  <button mat-menu-item [matMenuTriggerFor]="bookType" [routerLink]="['list']">
     <mat-icon>book</mat-icon>
     <span>Catálogo</span>
   </button>
@@ -24,10 +24,15 @@
     <span>Géneros</span>
   </button>
 
+  <button [routerLink]="['about']" mat-menu-item>
+    <mat-icon>face</mat-icon>
+    <span>About Us</span>
+  </button>
+
 </mat-menu>
 
 <mat-menu #bookType="matMenu">
-  <button mat-menu-item><mat-icon>collections_bookmark</mat-icon>Tapa</button>
+  <button [routerLink]="['books']" mat-menu-item><mat-icon>collections_bookmark</mat-icon>Tapa</button>
   <button mat-menu-item><mat-icon>phone_android</mat-icon>Digital</button>
 </mat-menu>
 

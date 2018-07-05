@@ -22,7 +22,6 @@ import { MatToolbarModule,
          MatCardModule,
          MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 import { BookTableComponent } from './book-table/book-table.component';
-import { AppFooterComponent } from './app-footer/app-footer.component';
 import { AppGridComponent } from './app-grid/app-grid.component';
 import { scrollfixedNav } from './fixed-nav/scroll.directive';
 import { FixedNavComponent } from './fixed-nav/fixed-nav.component';
@@ -30,6 +29,15 @@ import { BooksAppComponent } from './books-app/books-app.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { FooterMenuComponent } from './footer-menu/footer-menu.component';
+import { AppAboutComponent } from './app-about/app-about.component';
+
+//app_routes
+
+import { AppRoutingModule } from './app.routes';
+import { TopTitleComponent } from './top-title/top-title.component';
+import { FooterNavComponent } from './footer-nav/footer-nav.component';
+import { AppWelcomeComponent } from './app-welcome/app-welcome.component';
+
 
 
 
@@ -38,13 +46,16 @@ import { FooterMenuComponent } from './footer-menu/footer-menu.component';
     AppComponent,
     TopNavComponent,
     BookTableComponent,
-    AppFooterComponent,
     AppGridComponent,
     scrollfixedNav,
     FixedNavComponent,
     BooksAppComponent,
     TopMenuComponent,
     FooterMenuComponent,
+    AppAboutComponent,
+    TopTitleComponent,
+    FooterNavComponent,
+    AppWelcomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -63,7 +74,8 @@ import { FooterMenuComponent } from './footer-menu/footer-menu.component';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    AppRoutingModule
 
   ],
   providers: [],

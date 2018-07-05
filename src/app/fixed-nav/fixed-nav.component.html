@@ -1,58 +1,34 @@
-
 <div class="row">
   <div scrolling class="col s12 m2 l1 fixed" id="fixed">
-    <!-- Fixed Nav & Scroll Directive -->
+
     <ul class="mainList">
-      <li><a href="#">Libros</a></li>
+      <li><a href="#">{{ navTitles[0] }}</a></li>
       <li>
         <ul class="nestedList">
-           <li><a href="#">Romántica</a></li>
-           <li><a href="#">Policíaca</a></li>
-           <li><a href="#">Historia</a></li>
-           <li><a href="#">Literatura</a></li>
-           <li><a href="#">Consulta</a></li>
-           <li><a href="#">Infantil</a></li>
-         </ul>
-       </li>
-     </ul>
-
-  <ul class="mainList">
-       <li><a href="#">Formato</a></li>
-       <li>
-          <ul class="nestedList">
-            <li><a href="#">Tapa Blanda</a></li>
-            <li><a href="#">Tapa dura</a></li>
-            <li><a href="#">Digital</a></li>
-          </ul>
-        </li>
-    </ul>
-
-  <ul class="mainList">
-        <li><a href="#">Idioma</a></li>
-        <li>
-           <ul class="nestedList">
-             <li><a href="#">Español</a></li>
-             <li><a href="#">Catalán</a></li>
-             <li><a href="#">Inglés</a></li>
-           </ul>
-         </li>
-      </ul>
-  </div>
-</div>
-
-
-<!-- Make this part MVC
-
-<div class="row">
-  <div scrolling class="col s12 m2 l1 fixed" id="fixed">
-    Fixed Nav & Scroll Directive
-    <ul class="mainList" *ngFor="let navTitle of navTitles">
-      <li><a href="#">{{ navTitle }}</a></li>
-      <li>
-        <ul class="nestedList">
-           <li *ngFor="let navItemsBook of navItemsBooks"><a href="#">{{navItemsBook}}</a></li>
+           <li *ngFor="let Gender of Genders"><a href="#{{Gender}}">{{Gender}}</a></li>
         </ul>
        </li>
      </ul>
+
+     <ul class="mainList">
+       <li><a href="#">{{ navTitles[1] }}</a></li>
+       <li>
+         <ul class="nestedList">
+            <li *ngFor="let Format of Formats; let i = index"
+                [ngClass]="{'long': Format[i] = 'Tapa Blanda'}"> <!-- Apply "long" Class to Format = 'Tapa Blanda' NOT WORKING -->
+                <a href="#{{Format}}">{{Format}}</a></li>
+         </ul>
+        </li>
+      </ul>
+
+      <ul class="mainList">
+        <li><a href="#">{{ navTitles[2] }}</a></li>
+        <li>
+          <ul class="nestedList">
+             <li *ngFor="let Language of Languages"><a href="#{{Language}}">{{Language}}</a></li>
+          </ul>
+         </li>
+       </ul>
+
   </div>
-</div>   -->
+</div>

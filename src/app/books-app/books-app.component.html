@@ -1,21 +1,24 @@
+<h2>Catálogo</h2>
 <div class="ngPagination">
 
 <pagination-controls class="ngPagesMobile" (pageChange)="p = $event"></pagination-controls>
 
     <div [scrolling] *ngFor="let book of books | paginate: { itemsPerPage: 4, currentPage: p }"
     class="col l3 s6"
-    [ngClass]="{'red': book['bookPrice']>='30'}"> <!-- Apply "red" Class to book 'Price > 20' -->
+    [ngClass]="{'red': book['bookPrice']>='30'}"> <!-- Apply "red" Class to book 'Price > 30' -->
       <div class="card sticky-action hoverable">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{urlPath}}{{book['bookImage']}}.jpg">
+          <img src="{{urlPath}}{{book['bookImage']}}.jpg">
         </div>
         <div class="card-content">
-          <span class="card-title activator grey-text text-darken-4
+          <span class="card-title grey-text text-darken-4
           truncate scroll-border-bottom">{{ book["bookTitle"] }}</span>
         <div class="book-author">{{ book["bookAuthor"] }}</div>
         </div>
         <div class="card-action">
-          <a href="#">Comprar</a>
+          <a href="#"><mat-icon class="shopCart">shopping_cart</mat-icon></a>
+          <a href="#"><mat-icon (click)="addLike(book['bookId'])" class="shopCart">favorite_border</mat-icon></a>
+          <p>Likes: {{ book["bookLikes"] }}</p>
         </div>
       </div>
    </div>

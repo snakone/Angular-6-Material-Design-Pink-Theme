@@ -51,8 +51,10 @@ li a {
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
   display: block;
+}
 
-
+li .long {
+  width: 120%;
 }
 
 li a:hover {

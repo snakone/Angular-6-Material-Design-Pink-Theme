@@ -5,32 +5,86 @@ import { Observable, of as observableOf, merge } from 'rxjs';
 
 // TODO: Replace this with your own data model type
 export interface BookTableItem {
-  name: string;
-  id: number;
+       bookId: number,
+       bookTitle: string,
+       bookAuthor: string,
+       bookGender: string,
+       bookPrice: number,
+       bookImage: string,
+       bookLikes: number
 }
 
 // TODO: replace this with real data from your application
 const EXAMPLE_DATA: BookTableItem[] = [
-  {id: 1, name: 'Hydrogen'},
-  {id: 2, name: 'Helium'},
-  {id: 3, name: 'Lithium'},
-  {id: 4, name: 'Beryllium'},
-  {id: 5, name: 'Boron'},
-  {id: 6, name: 'Carbon'},
-  {id: 7, name: 'Nitrogen'},
-  {id: 8, name: 'Oxygen'},
-  {id: 9, name: 'Fluorine'},
-  {id: 10, name: 'Neon'},
-  {id: 11, name: 'Sodium'},
-  {id: 12, name: 'Magnesium'},
-  {id: 13, name: 'Aluminum'},
-  {id: 14, name: 'Silicon'},
-  {id: 15, name: 'Phosphorus'},
-  {id: 16, name: 'Sulfur'},
-  {id: 17, name: 'Chlorine'},
-  {id: 18, name: 'Argon'},
-  {id: 19, name: 'Potassium'},
-  {id: 20, name: 'Calcium'},
+  {
+      "bookId" : 1,
+      "bookTitle" : "The Punisher",
+      "bookAuthor" : "Gerry Conway",
+      "bookGender" : "Acción",
+      "bookPrice" : 15.5,
+      "bookImage" : "Punisher",
+      "bookLikes" : 0
+  },
+  {
+      "bookId" : 2,
+      "bookTitle" : "La desaparición de Stephanie Mailer",
+      "bookAuthor" : "Joël Dicker ",
+      "bookGender" : "Literatura",
+      "bookPrice" : 21.4,
+      "bookImage" : "StephanieMailer",
+      "bookLikes" : 0
+  },
+  {
+      "bookId" : 3,
+      "bookTitle" : "Con un cassette y un boli Bic",
+      "bookAuthor" : "Defreds",
+      "bookGender" : "Poesia",
+      "bookPrice" : 19.6,
+      "bookImage" : "Cassete",
+      "bookLikes" : 0
+  },
+  {
+      "bookId" :4,
+      "bookTitle" : "Los perros duros no bailan",
+      "bookAuthor" : "A. Pérez-Reverte",
+      "bookGender" : "Narrativa",
+      "bookPrice" : 25.3,
+      "bookImage" : "PerrosBailan",
+      "bookLikes" : 0
+  },
+  {
+      "bookId" : 5,
+      "bookTitle" : "El proyecto de mi vida",
+      "bookAuthor" : "Megan Maxwell",
+      "bookGender" : "Romántica",
+      "bookPrice" : 13.5,
+      "bookImage" : "Megan",
+      "bookLikes" : 0
+  },{
+      "bookId" : 6,
+      "bookTitle" : "Stars: Estrellas Fugaces",
+      "bookAuthor" : "Anna Todd",
+      "bookGender" : "Juvenil",
+      "bookPrice" : 14.9,
+      "bookImage" : "Stars",
+      "bookLikes" : 0
+  },{
+      "bookId" : 7,
+      "bookTitle" : "Culpa mía",
+      "bookAuthor" : "Mercedes Ron",
+      "bookGender" : "Juvenil",
+      "bookPrice" : 22.1,
+      "bookImage" : "Culpa",
+      "bookLikes" : 0
+  },{
+      "bookId" : 8,
+      "bookTitle" : "Pasajera",
+      "bookAuthor" : "Alexandra Bracken",
+      "bookGender" : "Juvenil",
+      "bookPrice" : 16.6,
+      "bookImage" : "Pasajera",
+      "bookLikes" : 0
+  }
 ];
 
 /**
@@ -94,8 +148,11 @@ export class BookTableDataSource extends DataSource<BookTableItem> {
     return data.sort((a, b) => {
       const isAsc = this.sort.direction === 'asc';
       switch (this.sort.active) {
-        case 'name': return compare(a.name, b.name, isAsc);
-        case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'bookTitle': return compare(a.bookTitle, b.bookTitle, isAsc);
+        case 'bookAuthor': return compare(a.bookAuthor, b.bookAuthor, isAsc);
+        case 'bookGender': return compare(a.bookGender, b.bookGender, isAsc);
+        case 'bookPrice': return compare(a.bookPrice, b.bookPrice, isAsc);
+        case 'bookLikes': return compare(a.bookLikes, b.bookLikes, isAsc);
         default: return 0;
       }
     });

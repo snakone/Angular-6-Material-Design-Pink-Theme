@@ -8,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class FixedNavComponent implements OnInit {
 
   navTitles: string[];
-  navItemsBooks: string[];
-  navItemsFormats: string[];
-  navItemsLanguages: string[];
+
+  Genders: string[];
+  Formats: string[];
+  Languages: string[];
 
   constructor() {
 
     this.navTitles = ["Libros","Formato","Idioma"];
-    this.navItemsBooks = ["Policíaca","Historia","Literatura", "Consulta", "Infantil"];
-    this.navItemsFormats = ["Tapa Dura", "Tapa Blanda", "Digital"];
-    this.navItemsLanguages = ["Español", "Catalán", "Inglés"];
+
+    this.Genders = ["Policíaca","Historia","Literatura", "Consulta", "Infantil", "Juvenil"];
+    this.Formats = ["Tapa Dura", "Tapa Blanda", "Digital"];
+    this.Languages = ["Español", "Catalán", "Inglés"];
   }
 
   ngOnInit() {

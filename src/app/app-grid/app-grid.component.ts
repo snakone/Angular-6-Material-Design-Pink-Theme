@@ -8,17 +8,9 @@ import { Component, OnInit } from '@angular/core';
 
 export class AppGridComponent implements OnInit {
 
-  gridTitle: string;
-  gridsubTitle: string;
-
-
   constructor() {
 
-  this.gridTitle = "Tinta Virtual";
-  this.gridsubTitle = "Libros digitales y de siempre";
-
  }
-
 
   ngOnInit() {
   }

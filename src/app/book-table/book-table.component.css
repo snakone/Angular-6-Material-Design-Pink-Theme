@@ -1,0 +1,64 @@
+.mat-elevation-z8 {
+  margin-top: 50px;
+}
+
+.cdk-column-bookTitle {
+  min-width: 35%;
+}
+
+.cdk-column-bookAuthor {
+  min-width: 25%;
+}
+
+.cdk-column-bookLikes {
+  max-width: 10%;
+}
+
+.cdk-column-bookPrice {
+  max-width: 10%;
+}
+
+.cdk-column-bookGender {
+  max-width: 20%;
+}
+
+
+.mat-row, .mat-header-row {
+min-width: 1024px;
+}
+
+.mat-cell {
+  text-align: center;
+}
+
+.mat-header-row {
+  background-color: #FF4081;
+
+
+}
+.mat-header-row .ng-star-inserted {
+    color:white;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.cdk-column-bookAuthor{
+  text-align: center!important;
+}
+
+
+
+mat-table {
+  overflow-x: auto;
+
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.likes {
+  color:#FF4081;
+  font-weight: bold;
+}
